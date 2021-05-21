@@ -10,24 +10,28 @@ function setDate() {
         case 0:
             bugun = "pazar";
             break;
-          case 1:
+        case 1:
             bugun = "pazartesi";
             break;
-          case 2:
+        case 2:
             bugun = "sali";
             break;
-          case 3:
+        case 3:
             bugun = "carsamba";
             break;
-          case 4:
+        case 4:
             bugun = "persembe";
             break;
-          case 5:
+        case 5:
             bugun = "cuma";
             break;
-          case 6:
+        case 6:
             bugun = "cumartesi";
-        }
+    }
+
+    saniye = saniye < 10 ? `0${saniye}` : saniye;
+    dakika = dakika < 10 ? `0${dakika}` : dakika;
+    saat = saat < 10 ? `0${saat}` : saat;
 
     document.getElementById('days').innerText = bugun;
     document.getElementById('hours').innerText = saat;
@@ -49,14 +53,14 @@ function getName() {
 
     document.getElementById('headline').innerText = `merhabalar ben ${n}`
     document.querySelector('title').innerText = `${n}'in dogumgunu`
-    
+
     return n;
 
-    
+
 }
 
 getName()
 setDate()
-setTimeout(function(){
+setTimeout(function () {
     window.location.reload(1);
- }, 1000);
+}, 1000);
